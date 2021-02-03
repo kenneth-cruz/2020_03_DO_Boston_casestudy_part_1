@@ -5,7 +5,7 @@ timestamps {
 node () {
 
 	stage ('capstone-project - Checkout') {
- 	 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/kenneth-cruz/2020_03_DO_Boston_casestudy_part_1.git']]]) 
+ 	 checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/kenneth-cruz/2020_03_DO_Boston_casestudy_part_1.git']]]) 
 	}
 	stage ('capstone-project - Build') {
  	
