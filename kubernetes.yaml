@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment  
+metadata:
+  name: 2020_03_DO_Boston_casestudy_part_1
+spec:
+  selector:
+    matchLabels:
+      app: capstone-project-ken-cruz-deployment
+  replicas: 3 
+  template:
+    metadata:
