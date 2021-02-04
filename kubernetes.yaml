@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app: capstone-project
+        app: 
     spec:
       containers:
       - name: capstone-project-container 
