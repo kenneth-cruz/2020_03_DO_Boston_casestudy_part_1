@@ -1,5 +1,6 @@
-FROM python3:latest
-WORKDIR /app
-RUN git clone "https://github.com/kenneth-cruz/2020_03_DO_Boston_casestudy_part_1.git"
-RUN pip install requirements.txt
-CMD ["python3", "web.py"]
+FROM python:3.8
+WORKDIR /usr/src/app
+COPY . .
+RUN pip install --no-cache-dir -r requirements.txt
+EXPOSE 8090
+CMD [ "python", "./web.py" ]

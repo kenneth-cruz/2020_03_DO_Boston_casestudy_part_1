@@ -9,7 +9,7 @@ pipeline {
     stages { 
         stage('Cloning our Git') { 
             steps { 
-                sh 'git clone https://github.com/kenneth-cruz/2020_03_DO_Boston_casestudy_part_1.git' 
+                sh 'git clone https://github.com/kenneth-cruz/2020_03_DO_Boston_casestudy_part_1' 
             }
         } 
         stage('Building our image') { 
