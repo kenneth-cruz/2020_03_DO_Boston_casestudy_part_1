@@ -7,16 +7,9 @@ pipeline {
     }
     agent any 
     stages { 
-		stage('Set Up') {
-            steps {
-                script {
-                    sh 'rm -rf 2020_03_DO_Boston_casestudy_part_1'
-                }
-            }
-        }
         stage('Cloning our Git') { 
             steps { 
-                git 'https://github.com/kenneth-cruz/2020_03_DO_Boston_casestudy_part_1.git' 
+                sh 'git clone https://github.com/kenneth-cruz/2020_03_DO_Boston_casestudy_part_1.git' 
             }
         } 
         stage('Building our image') { 
