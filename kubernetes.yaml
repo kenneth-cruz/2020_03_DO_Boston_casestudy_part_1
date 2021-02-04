@@ -1,35 +1,35 @@
 apiVersion: apps/v1
 kind: Deployment  
 metadata:
-  name: case-study
+  name: case-study-deployment
 spec:
   selector:
     matchLabels:
-      app: capstone-project-ken-cruz-deployment
+      app: flask
   replicas: 3 
   template:
     metadata:
       labels:
-        app:
+        app: flask
     spec:
       containers:
-      - name: capstone-project-container 
-        image: kenneth-cruz/app-sba-kubernetes-cluster:1.0
+      - name: flask 
+        image: kennethcruz/kencruzcapstone:latest
         ports:
-        - containerPort: 8090 
+        - containerPort: 8070
 ---
 # https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service
  # service maps the pods into one IP address
 apiVersion: v1
 kind: Service
 metadata:
-  name: capstone-project-ken-cruz-service 
+  name: case-study-service 
 spec:
   type: NodePort
   selector:
-    app: case-study
+    app: flask
   ports:
     - protocol: TCP
-      port: 8090
-      targetPort: 8090
-      nodePort: 30008
+      port: 8070
+      targetPort: 8070
+      nodePort: 30004
