@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment  
 metadata:
-  name: 2020_03_DO_Boston_casestudy_part_1
+  name: 2020-03-DO-Boston-casestudy-part-1
 spec:
   selector:
     matchLabels:
@@ -27,7 +27,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: 2020_03_DO_Boston_casestudy_part_1
+    app: 2020-03-DO-Boston-casestudy-part-1
   ports:
     - protocol: TCP
       port: 8090
