@@ -19,6 +19,7 @@
      #pushes the newly built image to the dockerhub repository.
 
 
+### THIS PART CRASHED
 - hosts: servers 
 
   tasks:
