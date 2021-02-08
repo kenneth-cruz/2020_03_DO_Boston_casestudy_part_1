@@ -10,3 +10,13 @@
      # the corresponding image based on the dependencies
      shell: docker push kennethcruz/kencruzcapstone
      #pushes the newly built image to the dockerhub repository.
+
+
+- hosts: servers 
+
+  tasks:
+     - name: getting minikube up and running
+       shell: minikube start
+       register: output
+     - name: deploy flask app on minikube cluster
+       shell: kubectl apply -f ~/2020_03_DO_Boston_casestudy_part_1/kubernetes.yml
