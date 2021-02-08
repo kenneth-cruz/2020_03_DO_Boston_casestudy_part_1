@@ -1,0 +1,6 @@
+- hosts: localhost
+  tasks:
+     - name: removing the repo currently in place.
+     shell: rm -rf 2020_03_DO_Boston_casestudy_part_1
+     - name: get the repo back again.
+     shell: git clone https://github.com/kenneth-cruz/2020_03_DO_Boston_casestudy_part_1.git
