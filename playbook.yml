@@ -4,3 +4,9 @@
      shell: rm -rf 2020_03_DO_Boston_casestudy_part_1
      - name: get the repo back again.
      shell: git clone https://github.com/kenneth-cruz/2020_03_DO_Boston_casestudy_part_1.git
+     - name: building my docker image
+     shell: docker image build -t kennethcruz/kencruzcapstone
+     # this looks into my repo, looks for my Dockerfile, and builds
+     # the corresponding image based on the dependencies
+     shell: docker push kennethcruz/kencruzcapstone
+     #pushes the newly built image to the dockerhub repository.
