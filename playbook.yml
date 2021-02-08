@@ -9,6 +9,8 @@
      shell: rm -rf 2020_03_DO_Boston_casestudy_part_1
      - name: get the repo back again.
      shell: git clone https://github.com/kenneth-cruz/2020_03_DO_Boston_casestudy_part_1.git
+    
+    # THIS PART WAS ORIGINALLY IN MY JENKINSFILE
      - name: building my docker image
      shell: docker image build -t kennethcruz/kencruzcapstone
      # this looks into my repo, looks for my Dockerfile, and builds
@@ -23,5 +25,6 @@
      - name: getting minikube up and running
        shell: minikube start
        register: output
+    # The minikube start command encountered errors, ran it locally for now.
      - name: deploy flask app on minikube cluster
        shell: kubectl apply -f ~/2020_03_DO_Boston_casestudy_part_1/kubernetes.yml
